@@ -12,14 +12,6 @@
       font-weight: bold;
     }
 
-    textarea {
-      width: 100%;
-      height: 30px;
-      margin-bottom: 10px;
-      font-family: 'Roboto Black', Arial, sans-serif;
-      font-weight: bold;
-    }
-
     button {
       padding: 10px;
       cursor: pointer;
@@ -30,94 +22,32 @@
 </head>
 <body>
 
-  <!-- Added 11 textboxes and copy buttons --> 
-  <textarea id="myText1">1TEST</textarea> 
-  <button onclick="copyText(1)">¹watch.Kannur.Squad.mx</button> 
- 
-  <textarea id="myText2">2TEST</textarea> 
-  <button onclick="copyText(2)">²Theeppori.Benny.2023.1080p.AMZN.WEB-DL.DD+5.1.H.264-CPTN5DW.mkv</button> 
- 
-  <textarea id="myText3">3TEST</textarea> 
-  <button onclick="copyText(3)">³¹²watch.Jigardandha.mx</button> 
- 
-  <textarea id="myText4">Text 4</textarea> 
-  <button onclick="copyText(4)">⁴watch.Ko.mx</button> 
- 
-  <textarea id="myText5">Text 5</textarea> 
-  <button onclick="copyText(5)">Copy Text 5</button> 
- 
-  <textarea id="myText6">Text 6</textarea> 
-  <button onclick="copyText(6)">Copy Text 6</button> 
- 
-  <textarea id="myText7">Text 7</textarea> 
-  <button onclick="copyText(7)">Copy Text 7</button> 
- 
-  <textarea id="myText8">Text 8</textarea> 
-  <button onclick="copyText(8)">Copy Text 8</button> 
- 
-  <textarea id="myText9">http://squireelstream-2d3851c043f4.herokuapp.com/22381/Modern_Love_Chennai_S01E06_Ninaivo_Oru_Paravai_1080p_AMZN_WEB_DL.mkv?hash=AgADhB</textarea> 
-  <button onclick="copyText(9)">¹⁹watch.Modern.Love.Chennai.mx</button> 
- 
-  <textarea id="myText10">https://dl.tgxbots.workers.dev/dl/776360?hash=AgADhB</textarea> 
-  <button onclick="copyText(10)">⁸⁶⁷⁸⁹³⁷watch.Killer.mx</button> 
+  <!-- Added 11 copy buttons -->
+  <button onclick="copyText(1, '1TEST')">¹watch.Kannur.Squad.mx</button>
+  <button onclick="copyText(2, '2TEST')">²Theeppori.Benny.2023.1080p.AMZN.WEB-DL.DD+5.1.H.264-CPTN5DW.mkv</button>
+  <button onclick="copyText(3, '3TEST')">³¹²watch.Jigardandha.mx</button>
+  <button onclick="copyText(4, 'Text 4')">⁴watch.Ko.mx</button>
+  <button onclick="copyText(5, 'Text 5')">Copy Text 5</button>
+  <button onclick="copyText(6, 'Text 6')">Copy Text 6</button>
+  <button onclick="copyText(7, 'Text 7')">Copy Text 7</button>
+  <button onclick="copyText(8, 'Text 8')">Copy Text 8</button>
+  <button onclick="copyText(9, 'http://squireelstream-2d3851c043f4.herokuapp.com/22381/Modern_Love_Chennai_S01E06_Ninaivo_Oru_Paravai_1080p_AMZN_WEB_DL.mkv?hash=AgADhB')">¹⁹watch.Modern.Love.Chennai.mx</button>
+  <button onclick="copyText(10, 'https://dl.tgxbots.workers.dev/dl/776360?hash=AgADhB')">⁸⁶⁷⁸⁹³⁷watch.Killer.mx</button>
+  <button onclick="copyText(11, 'https://stream.airtelxstreamsmarttube.workers.dev/download.aspx?file=1ViMBUqPeIs8UX7PBtIC4fQwHqFjbdl0Uab4TYO2REH4w2USzuhg%2B2qm2xltnWT9&expiry=JH7FdeSeCRDYD6PxUXqw1Q%3D%3D&mac=4e73f36dab1bc91a808bcca284dda7581090a2956e8e7589381e0ff3df1da6b2')">¹²³⁴⁵⁶⁷⁸⁹watch.Label.S01E01.mx</button>
+  <!-- Add the rest of your copy buttons -->
 
-  <textarea id="myText11">https://stream.airtelxstreamsmarttube.workers.dev/download.aspx?file=1ViMBUqPeIs8UX7PBtIC4fQwHqFjbdl0Uab4TYO2REH4w2USzuhg%2B2qm2xltnWT9&expiry=JH7FdeSeCRDYD6PxUXqw1Q%3D%3D&mac=4e73f36dab1bc91a808bcca284dda7581090a2956e8e7589381e0ff3df1da6b2</textarea> 
-  <button onclick="copyText(11)">¹²³⁴⁵⁶⁷⁸⁹watch.Label.S01E01.mx</button>
-  
-  <textarea id="myText12">Text 12</textarea>
-  <button onclick="copyText(12)">Copy Text 12</button>
+  <script>
+    function copyText(index, text) {
+      var textArea = document.createElement("textarea");
+      textArea.value = text;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
 
-  <textarea id="myText13">Text 13</textarea>
-  <button onclick="copyText(13)">Copy Text 13</button>
+      alert("Text " + index + " copied");
+    }
+  </script>
 
-  <textarea id="myText14">Text 14</textarea>
-  <button onclick="copyText(14)">Copy Text 14</button>
-
-  <textarea id="myText15">Text 15</textarea>
-  <button onclick="copyText(15)">Copy Text 15</button>
-
-  <textarea id="myText16">Text 16</textarea>
-  <button onclick="copyText(16)">Copy Text 16</button>
-
-  <textarea id="myText17">Text 17</textarea>
-  <button onclick="copyText(17)">Copy Text 17</button>
-
-  <textarea id="myText18">Text 18</textarea>
-  <button onclick="copyText(18)">Copy Text 18</button>
-
-  <textarea id="myText19">Text 19</textarea>
-  <button onclick="copyText(19)">Copy Text 19</button>
-
-  <textarea id="myText20">Text 20</textarea>
-  <button onclick="copyText(20)">Copy Text 20</button>
-
-  <textarea id="myText21">Text 21</textarea>
-  <button onclick="copyText(21)">Copy Text 21</button>
-
-  <textarea id="myText22">Text 22</textarea>
-  <button onclick="copyText(22)">Copy Text 22</button>
-
-  <textarea id="myText23">Text 23</textarea>
-  <button onclick="copyText(23)">Copy Text 23</button>
-
-  <textarea id="myText24">Text 24</textarea>
-  <button onclick="copyText(24)">Copy Text 24</button>
-
-  <textarea id="myText25">Text 25</textarea>
-  <button onclick="copyText(25)">Copy Text 25</button>
- 
-  <script> 
-    // Modified function to accept a parameter for the textarea index 
-    function copyText(index) { 
-      var copyText = document.getElementById("myText" + index); 
-      copyText.select(); 
-      copyText.setSelectionRange(0, 99999); /* For mobile devices */ 
- 
-      document.execCommand("copy"); 
- 
-      alert("Text " + index + " copied"); 
-    } 
-  </script> 
- 
-</body> 
+</body>
 </html>
