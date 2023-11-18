@@ -10,8 +10,6 @@
       font-family: 'Roboto Black', Arial, sans-serif;
       margin: 20px;
       font-weight: bold;
-      background-color: black; /* Set background color to black */
-      color: white; /* Set text color to white */
     }
 
     textarea {
@@ -33,7 +31,8 @@
 <body>
 
   <!-- Added 11 textboxes and copy buttons --> 
-  <button onclick="copyText(1, 'https://stream.airtelxstreamsmarttube.workers.dev/download.aspx?file=UviaoXYTsgumOWMW9l5sITNpRA1Bv58b0RoAvujp%2BLgbUypP1lIztl0tDwREV6lF&expiry=0inpSvq6af%2BCmfOSAt3eoQ%3D%3D&mac=891ccd638ea4702307da719ab5be53d8e83638042476addcea47c5aa2d5bb121')">¹watch.Kannur.Squad.mx</button>
+  <textarea id="myText1">https://stream.airtelxstreamsmarttube.workers.dev/download.aspx?file=UviaoXYTsgumOWMW9l5sITNpRA1Bv58b0RoAvujp%2BLgbUypP1lIztl0tDwREV6lF&expiry=0inpSvq6af%2BCmfOSAt3eoQ%3D%3D&mac=891ccd638ea4702307da719ab5be53d8e83638042476addcea47c5aa2d5bb121</textarea> 
+  <button onclick="copyText(1)">¹watch.Kannur.Squad.mx</button> 
  
   <textarea id="myText2">https://stream.airtelxstreamsmarttube.workers.dev/download.aspx?file=1ViMBUqPeIs8UX7PBtIC4fQwHqFjbdl0Uab4TYO2REH4w2USzuhg%2B2qm2xltnWT9&expiry=JH7FdeSeCRDYD6PxUXqw1Q%3D%3D&mac=4e73f36dab1bc91a808bcca284dda7581090a2956e8e7589381e0ff3df1da6b2</textarea> 
   <button onclick="copyText(2)">²Theeppori.Benny.2023.1080p.AMZN.WEB-DL.DD+5.1.H.264-CPTN5DW.mkv</button> 
@@ -108,15 +107,15 @@
   <button onclick="copyText(25)">Copy Text 25</button>
  
   <script> 
-    function copyText(index, text) { 
-      var textArea = document.createElement("textarea");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-
-      alert("Text " + index + " copied");
+    // Modified function to accept a parameter for the textarea index 
+    function copyText(index) { 
+      var copyText = document.getElementById("myText" + index); 
+      copyText.select(); 
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */ 
+ 
+      document.execCommand("copy"); 
+ 
+      alert("Text " + index + " copied"); 
     } 
   </script> 
  
