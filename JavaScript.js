@@ -1,13 +1,22 @@
-function copyText() {
-    // Get the textbox element
-    let textbox = document.getElementById('myTextbox');
+<!-- ... (your existing HTML code) ... -->
 
-    // Select the text in the textbox
-    textbox.select();
-    textbox.setSelectionRange(0, 99999); /* For mobile devices */
+<script>
+    function copyToClipboard() {
+        // Select the text area
+        var copyText = document.getElementById("textArea");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
 
-    // Copy the text to the clipboard
-    document.execCommand('copy');
+        // Copy the selected text
+        document.execCommand('copy');
 
-    alert('Text copied!');
-}
+        // Deselect the text area
+        copyText.setSelectionRange(0, 0);
+
+        // Alert or any other user feedback
+        alert("Text copied to clipboard: " + copyText.value);
+    }
+</script>
+
+</body>
+</html>
