@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clipboard Copy Example</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy Text Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
 
-        #textArea {
-            width: 300px;
-            height: 100px;
-            resize: none;
-            margin-bottom: 10px;
-        }
+    textarea {
+      width: 100%;
+      height: 30px; /* Adjusted height for better visibility */
+      margin-bottom: 10px; /* Added margin between textboxes */
+    }
 
-        #copyButton {
-            cursor: pointer;
-            padding: 5px 10px;
-            font-size: 16px;
-        }
-    </style>
+    button {
+      padding: 10px; /* Adjusted padding for better button size */
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Clipboard Copy Example</h1>
+  <!-- Added 10 textboxes and copy buttons -->
+  <textarea id="myText1">Text 1</textarea>
+  <button onclick="copyText(1)">Copy Text 1</button>
 
-    <textarea id="textArea" placeholder="Type something..."></textarea><br>
+  <textarea id="myText2">Text 2</textarea>
+  <button onclick="copyText(2)">Copy Text 2</button>
 
-    <button id="copyButton" onclick="copyToClipboard()">Copy to Clipboard</button>
+  <textarea id="myText3">Text 3</textarea>
+  <button onclick="copyText(3)">Copy Text 3</button>
 
-    <script>
-        function copyToClipboard() {
-            var copyText = document.getElementById("textArea");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); // For mobile devices
-            document.execCommand('copy');
-            copyText.setSelectionRange(0, 0);
-            alert("Text copied to clipboard: " + copyText.value);
-        }
-    </script>
+  <textarea id="myText4">Text 4</textarea>
+  <button onclick="copyText(4)">Copy Text 4</button>
+
+  <textarea id="myText5">Text 5</textarea>
+  <button onclick="copyText(5)">Copy Text 5</button>
+
+  <textarea id="myText6">Text 6</textarea>
+  <button onclick="copyText(6)">Copy Text 6</button>
+
+  <textarea id="myText7">Text 7</textarea>
+  <button onclick="copyText(7)">Copy Text 7</button>
+
+  <textarea id="myText8">Text 8</textarea>
+  <button onclick="copyText(8)">Copy Text 8</button>
+
+  <textarea id="myText9">Text 9</textarea>
+  <button onclick="copyText(9)">Copy Text 9</button>
+
+  <textarea id="myText10">Text 10</textarea>
+  <button onclick="copyText(10)">Copy Text 10</button>
+
+  <script>
+    // Modified function to accept a parameter for the textarea index
+    function copyText(index) {
+      var copyText = document.getElementById("myText" + index);
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+      document.execCommand("copy");
+
+      alert("Text " + index + " copied");
+    }
+  </script>
 
 </body>
 </html>
