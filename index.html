@@ -3,16 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Copy Textbox Content</title>
+    <title>Clipboard Copy Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #textArea {
+            width: 300px;
+            height: 100px;
+            resize: none;
+            margin-bottom: 10px;
+        }
+
+        #copyButton {
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Copy Textbox Content</h1>
-        <input type="text" id="myTextbox" value="Text to be copied">
-        <button onclick="copyText()">Copy Text</button>
-    </div>
 
-    <script src="script.js"></script>
+    <h1>Clipboard Copy Example</h1>
+
+    <textarea id="textArea" placeholder="Type something..."></textarea><br>
+
+    <button id="copyButton" onclick="copyToClipboard()">Copy to Clipboard</button>
+
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("textArea");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand('copy');
+            copyText.setSelectionRange(0, 0);
+            alert("Text copied to clipboard: " + copyText.value);
+        }
+    </script>
+
 </body>
 </html>
