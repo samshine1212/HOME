@@ -21,26 +21,60 @@
       font-weight: bold;
       margin-bottom: 5px; /* Add margin for better spacing */
     }
-
-    /* Add a class for the editable content */
-    .editable-content {
-      outline: none; /* Remove default outline */
-      border: none; /* Remove default border */
-      background-color: transparent; /* Make background transparent */
-      color: white; /* Set text color to white */
-      user-select: none; /* Disable text selection on the website */
-    }
   </style>
 </head>
 <body>
 
-  <!-- Add contenteditable attribute to make the text editable -->
-  <div id="movieName" class="editable-content" contenteditable="true">Porinju Mariyam Jose</div>
-
   <button onclick="copyText(1, 'https://cdn08.chiheisen.app/1001903060952/27367')">Porinju Mariyam Jose</button>
   <button onclick="copyText(2, 'https://dl.tgxbots.workers.dev/dl/776360?hash=AgADhB')">Coco</button>
   <button onclick="copyText(3, 'Coco')">Coco</button>
-  <!-- Repeat the pattern for other buttons with the appropriate indices -->
+  <button onclick="copyText(4, 'Coco')">Coco</button>
+  <button onclick="copyText(5, 'Coco')">Coco</button>
+  <button onclick="copyText(6, 'Coco')">Coco</button>
+  <button onclick="copyText(7, 'Coco')">Coco</button>
+  <button onclick="copyText(8, 'Coco')">Coco</button>
+  <button onclick="copyText(9, 'Coco')">Coco</button>
+  <button onclick="copyText(10, 'Coco')">Coco</button>
+  <button onclick="copyText(11, 'Coco')">Coco</button>
+  <button onclick="copyText(12, 'Coco')">Coco</button>
+  <button onclick="copyText(13, 'Coco')">Coco</button>
+  <button onclick="copyText(14, 'Coco')">Coco</button>
+  <button onclick="copyText(15, 'Coco')">Coco</button>
+  <button onclick="copyText(16, 'Coco')">Coco</button>
+  <button onclick="copyText(17, 'Coco')">Coco</button>
+  <button onclick="copyText(18, 'Coco')">Coco</button>
+  <button onclick="copyText(19, 'Coco')">Coco</button>
+  <button onclick="copyText(20, 'Coco')">Coco</button>
+  <button onclick="copyText(21, 'Coco')">Coco</button>
+  <button onclick="copyText(22, 'Coco')">Coco</button>
+  <button onclick="copyText(23, 'Coco')">Coco</button>
+  <button onclick="copyText(24, 'Coco')">Coco</button>
+  <button onclick="copyText(25, 'Coco')">Coco</button>
+  <button onclick="copyText(26, 'Coco')">Coco</button>
+  <button onclick="copyText(27, 'Coco')">Coco</button>
+  <button onclick="copyText(28, 'Coco')">Coco</button>
+  <button onclick="copyText(29, 'Coco')">Coco</button>
+  <button onclick="copyText(30, 'Coco')">Coco</button>
+  <button onclick="copyText(31, 'Coco')">Coco</button>
+  <button onclick="copyText(32, 'Coco')">Coco</button>
+  <button onclick="copyText(33, 'Coco')">Coco</button>
+  <button onclick="copyText(34, 'Coco')">Coco</button>
+  <button onclick="copyText(35, 'Coco')">Coco</button>
+  <button onclick="copyText(36, 'Coco')">Coco</button>
+  <button onclick="copyText(37, 'Coco')">Coco</button>
+  <button onclick="copyText(38, 'Coco')">Coco</button>
+  <button onclick="copyText(39, 'Coco')">Coco</button>
+  <button onclick="copyText(40, 'Coco')">Coco</button>
+  <button onclick="copyText(41, 'Coco')">Coco</button>
+  <button onclick="copyText(42, 'Coco')">Coco</button>
+  <button onclick="copyText(43, 'Coco')">Coco</button>
+  <button onclick="copyText(44, 'Coco')">Coco</button>
+  <button onclick="copyText(45, 'Coco')">Coco</button>
+  <button onclick="copyText(46, 'Coco')">Coco</button>
+  <button onclick="copyText(47, 'Coco')">Coco</button>
+  <button onclick="copyText(48, 'Coco')">Coco</button>
+  <button onclick="copyText(49, 'Coco')">Coco</button>
+  <button onclick="copyText(50, 'Coco')">Coco</button>
 
   <script>
     function copyText(index, text) {
@@ -51,15 +85,8 @@
       document.execCommand("copy");
       document.body.removeChild(textArea);
 
-      alert("Enjoy your Movie");
+      alert("Enjoy your Movie!");
     }
-
-    // Add event listener to copy the movie name when long pressing any part of it
-    document.getElementById('movieName').addEventListener('mousedown', function(event) {
-      if (event.button === 2) { // Right mouse button (2) for long press
-        copyText(0, document.getElementById('movieName').innerText);
-      }
-    });
   </script>
 
 </body>
