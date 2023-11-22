@@ -285,17 +285,32 @@
  
 
   <script>
-    function copyText(index, text) {
-      var textArea = document.createElement("textarea");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
+  function copyText(index, text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
 
-      alert("Enjoy your movie! " + index + " ");
-    }
-  </script>
+    alert("Enjoy your movie! " + index + " ");
+  }
+
+  // Set equal button width based on the button with the longest text
+  window.onload = function () {
+    var buttons = document.querySelectorAll("button");
+    var maxWidth = 0;
+
+    buttons.forEach(function (button) {
+      maxWidth = Math.max(maxWidth, button.offsetWidth);
+    });
+
+    buttons.forEach(function (button) {
+      button.style.width = maxWidth + "px";
+    });
+  };
+</script>
+
 
 </body>
 </html>
