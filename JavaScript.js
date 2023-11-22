@@ -2,21 +2,36 @@
 
 <script>
     function copyToClipboard() {
-        // Select the text area
         var copyText = document.getElementById("textArea");
         copyText.select();
-        copyText.setSelectionRange(0, 99999); // For mobile devices
+        copyText.setSelectionRange(0, 99999);
 
-        // Copy the selected text
-        document.execCommand('copy');
+        try {
+            document.execCommand('copy');
+            alert("Text copied to clipboard: " + copyText.value);
+        } catch (err) {
+            alert("Unable to copy text to clipboard. Please try again manually.");
+        }
 
-        // Deselect the text area
         copyText.setSelectionRange(0, 0);
+    }
 
-        // Alert or any other user feedback
-        alert("Text copied to clipboard: " + copyText.value);
+    function copyText(index, text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+            document.execCommand("copy");
+            alert("Enjoy your movie! " + index);
+        } catch (err) {
+            alert("Unable to copy text to clipboard. Please try again manually.");
+        }
+
+        document.body.removeChild(textArea);
     }
 </script>
 
-</body>
-</html>
+<!-- ... (your remaining HTML code) ... -->
+    
